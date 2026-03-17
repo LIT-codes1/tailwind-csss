@@ -1,7 +1,7 @@
 import { useState } from 'react';
 import AOS from "aos";
 import "aos/dist/aos.css";
-import { useEffect, useRef } from "react";
+import { useEffect} from "react";
 
 const Images4 = () => {
   useEffect(() => {
@@ -95,7 +95,7 @@ const Images4 = () => {
                </button>
      
                {/* Image */}
-               <img
+               <img alt='a'
                  src={images[currentIndex]}
                  className="max-h-[80vh] max-w-[90vw] rounded-lg"
                />

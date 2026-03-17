@@ -1,8 +1,7 @@
 import NavigationBarr from './NavigationBar';
-import { useEffect, useRef } from "react";
-import { useState } from 'react';
+import { useEffect } from "react";
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
-import { faBars, faCaretDown, faCheckDouble, faCopyright, faEnvelope, faPhone } from '@fortawesome/free-solid-svg-icons'
+import { faCheckDouble  } from '@fortawesome/free-solid-svg-icons'
 import EndingPart from './EndingPart';
 import AOS from "aos";
 import "aos/dist/aos.css";
@@ -33,7 +32,7 @@ useEffect(() => {
     ' data-aos="fade-in">Services</h1>
 
 
-    <img src='bookImage.webp'  className="absolute bottom-0 md:top-0 w-full h-[89%] md:h-full  object-cover object-right-bottom"/>
+    <img src='bookImage.webp' alt='a' className="absolute bottom-0 md:top-0 w-full h-[89%] md:h-full  object-cover object-right-bottom"/>
 
 </div>
 
@@ -77,10 +76,10 @@ useEffect(() => {
 
 
   <div className="innerBeauty relative h-auto w-full  mt-28 overflow-hidden ">
-    <img src='leafs.webp' className='absolute  w-full h-full object-cover object-left-top  bottom-0 z-0' />
+    <img alt='a' src='leafs.webp' className='absolute  w-full h-full object-cover object-left-top  bottom-0 z-0' />
 
     <div className= "  wi grid grid-cols-1 md:grid-cols-2  text-left z-50 px-5 gap-5 md:px-10 md:gap-7  lg:px-20 lg:gap-10 overflow-x-hidden">
-    <img  src='wis8.webp'
+    <img  alt='a' src='wis8.webp'
         className='w-[17rem]  z-50 thebord md:w-auto object-cover  ' data-aos="fade-right"
     />
 
@@ -120,7 +119,7 @@ useEffect(() => {
 
 
   <div className="innerBeauty relative h-auto w-full  mt-24 overflow-hidden ">
-    <img src='leafs.webp' className='absolute  w-full h-full object-cover object-left-top  bottom-0 z-0'/>
+    <img alt='a' src='leafs.webp' className='absolute  w-full h-full object-cover object-left-top  bottom-0 z-0'/>
 
     <div className= "  wi grid grid-cols-1 md:grid-cols-2 md:bg-yellow-400 text-left z-50 px-5 gap-5 md:px-10 md:gap-7  lg:px-20 lg:gap-10 overflow-x-hidden">
 
@@ -152,7 +151,7 @@ useEffect(() => {
  </div>
                  </div>
 
-                     <img  src='nn9.webp' data-aos="fade-left" 
+                     <img alt='a'  src='nn9.webp' data-aos="fade-left" 
         className='w-[17rem]  z-50 thebord md:w-full  '
     />
 
@@ -162,10 +161,10 @@ useEffect(() => {
 
 
  <div className="innerBeauty relative h-auto w-full  mt-24 overflow-hidden ">
-    <img src='leafs.webp' className='absolute  w-full h-full object-cover object-left-top  bottom-0 z-0'/>
+    <img alt='a' src='leafs.webp' className='absolute  w-full h-full object-cover object-left-top  bottom-0 z-0'/>
 
     <div className= "  wi grid grid-cols-1 md:grid-cols-2 md:bg-yellow-400 text-left z-50 px-5 gap-5 md:px-10 md:gap-7  lg:px-20 lg:gap-10 overflow-x-hidden">
-    <img  src='sh8.webp'
+    <img alt='a'  src='sh8.webp'
         className='w-[17rem]  z-50 thebord md:w-full  ' data-aos="fade-right" 
     />
 
@@ -201,7 +200,7 @@ useEffect(() => {
 
 
   <div className="innerBeauty relative h-auto w-full  mt-24 overflow-hidden ">
-    <img src='leafs.webp' className='absolute  w-full h-full object-cover object-left-top  bottom-0 z-0'/>
+    <img alt='a' src='leafs.webp' className='absolute  w-full h-full object-cover object-left-top  bottom-0 z-0'/>
 
     <div className= "  wi grid grid-cols-1 md:grid-cols-2 md:bg-yellow-400 text-left z-50 px-5 gap-5 md:px-10 md:gap-7 lg:px-20 lg:gap-10 overflow-x-hidden">
 
@@ -237,7 +236,7 @@ useEffect(() => {
  </div>
                  </div>
 
-                     <img  src='mmm8.webp'
+                     <img alt='a'  src='mmm8.webp'
         className='w-[17rem]  z-50 thebord  md:w-full ' data-aos="fade-left" 
     />
 
@@ -254,7 +253,7 @@ useEffect(() => {
 
 <div className="flex flex-col md:flex-row   items-center mt-5 p-5">
       <div data-aos="zoom-in" className="box1 w-[100%] h-[400px]  bg-slate-600 rounded-2xl shadow-[0_10px_25px_rgba(0,0,0,0.08)] text-[14px]">
-        <img src='model.webp' className='w-44  text-center mx-auto p-5 mt-5'/>
+        <img alt='a' src='model.webp' className='w-44  text-center mx-auto p-5 mt-5'/>
         <p className='Playfair Display  text-2xl text-center text-white  font-bold'>Wispy Lashes</p>
         <div className="mt-10  px-7  mx-auto">
         <p className='Poppins2 text-white '>Wispy Lashes ............................... $210</p>
@@ -263,7 +262,7 @@ useEffect(() => {
 </div>
       </div>
       <div data-aos="zoom-in" className="box1 w-[100%] h-[380px] bg-white rounded-2xl shadow-[0_10px_25px_rgba(0,0,0,0.12),0_20px_40px_rgba(0,0,0,0.10)] text-[14px]">
-            <img src='model2.webp' className='w-44  text-center mx-auto p-5 mt-5'/>
+            <img alt='a' src='model2.webp' className='w-44  text-center mx-auto p-5 mt-5'/>
         <p className='Playfair Display  text-2xl text-center text-black  font-bold'>Nude Makeup</p>
         <div className="mt-10  px-7  mx-auto">
         <p className='Poppins2 text-black '>Wispy Lashes ............................... $295</p>
@@ -275,7 +274,7 @@ useEffect(() => {
 
 <div className="flex flex-col  md:flex-row-reverse  items-center mt-5 p-5">
       <div data-aos="zoom-in" className="box1 w-[100%] h-[400px]  bg-slate-600 rounded-2xl shadow-[0_10px_25px_rgba(0,0,0,0.08)] text-[14px]">
-        <img src='model.webp' className='w-44  text-center mx-auto p-5 mt-5'/>
+        <img alt='a' src='model.webp' className='w-44  text-center mx-auto p-5 mt-5'/>
         <p className='Playfair Display  text-2xl text-center text-white  font-bold'>Matte Makeup</p>
         <div className="mt-10  px-7  mx-auto">
         <p className='Poppins2 text-white '>Wispy Lashes ............................... $200</p>
@@ -284,7 +283,7 @@ useEffect(() => {
 </div>
       </div>
       <div data-aos="zoom-in" className="box1 w-[100%] h-[380px] bg-white rounded-2xl shadow-[0_10px_25px_rgba(0,0,0,0.12),0_20px_40px_rgba(0,0,0,0.10)] text-[14px]">
-            <img src='model2.webp' className='w-44  text-center mx-auto p-5 mt-5'/>
+            <img alt='a' src='model2.webp' className='w-44  text-center mx-auto p-5 mt-5'/>
         <p className='Playfair Display  text-2xl text-center text-black  font-bold'>Micro Shading</p>
         <div className="mt-10  px-7  mx-auto">
         <p className='Poppins2 text-black '>Wispy Lashes ............................... $280</p>

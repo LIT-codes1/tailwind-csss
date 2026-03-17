@@ -1,7 +1,7 @@
 import { useState } from 'react';
 import AOS from "aos";
 import "aos/dist/aos.css";
-import { useEffect, useRef } from "react";
+import { useEffect } from "react";
 const Image2 = () => {
 
           useEffect(() => {
@@ -58,7 +58,7 @@ className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-4  px-7 '
     <div 
      key={index} className='items-center hover:opacity-80 relative group h-[400px]   md:p-12 transition-opacity duration-700 '
      >
-      <img
+      <img 
       loading="lazy" 
             data-aos="fade-in"
         src={src}
@@ -89,7 +89,7 @@ className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-4  px-7 '
           </button>
 
           {/* Image */}
-          <img
+          <img alt='a'
             src={images[currentIndex]}
             className="max-h-[80vh] max-w-[90vw] rounded-lg"
           />

@@ -1,39 +1,13 @@
 import NavigationBarr from './NavigationBar';
 import { useState } from 'react';
-import { useEffect, useRef } from "react";
-import { faInstagram } from '@fortawesome/free-brands-svg-icons';
-import { faTiktok } from '@fortawesome/free-brands-svg-icons';
-import { faLocationDot } from '@fortawesome/free-solid-svg-icons';
-import ScrollToTopButton from './ScrollToTopButton';
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
-import { faBars, faCaretDown, faCopyright, faEnvelope, faPhone } from '@fortawesome/free-solid-svg-icons'
+import { useEffect} from "react";
 import EndingPart from './EndingPart';
 import AOS from "aos";
 import "aos/dist/aos.css";
 
 
 
-export const useInView = (threshold = 0.3) => {
-  const ref = useRef(null);
-  const [isVisible, setIsVisible] = useState(false);
-  useEffect(() => {
-    const observer = new IntersectionObserver(
-      ([entry]) => {
-        if (entry.isIntersecting) {
-          setIsVisible(true);
-          observer.unobserve(entry.target);
-        }
-      },
-      { threshold } // ✅ MUST be an object
-    );
 
-    if (ref.current) observer.observe(ref.current);
-
-    return () => observer.disconnect();
-  }, [threshold]);
-
-  return { ref, isVisible };
-};
 const Appointment = () => {
   const [formData, setFormData] = useState({
     fname: "",
@@ -56,10 +30,7 @@ const Appointment = () => {
     console.log(formData);
     // send to backend / email / WhatsApp here
   };
-  const fadeUp11 = useInView(0.3);
-   const fadeUp13 = useInView(0.3);
-    const fadeUp12 = useInView(0.3);
-    const [isVisible, setIsVisible] = useState(false);
+
   
           useEffect(() => {
           AOS.init({
@@ -78,7 +49,8 @@ const Appointment = () => {
     md:text-6xl lack lg:text-7xl lg:leading-[1.2] xl:text-8xl 'data-aos="fade-in">Book Now</h1>
 
 
-    <img src='bookImage.webp' className="absolute bottom-0 md:top-0 w-full h-[89%] md:h-full  object-cover object-right-bottom"/>
+    <img alt='a' 
+    src='bookImage.webp'   className="absolute bottom-0 md:top-0 w-full h-[89%] md:h-full  object-cover object-right-bottom"/>
 
 </div>
    

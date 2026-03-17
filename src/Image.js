@@ -1,7 +1,7 @@
 import { useState } from 'react';
 import AOS from "aos";
 import "aos/dist/aos.css";
-import { useEffect, useRef } from "react";
+import { useEffect } from "react";
 
 
 const Images = () => {
@@ -97,7 +97,7 @@ className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-4  px-7 '
           </button>
 
           {/* Image */}
-          <img
+          <img alt='a'
             src={images[currentIndex]}
             className="max-h-[80vh] max-w-[90vw] rounded-lg"
           />

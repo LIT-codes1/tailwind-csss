@@ -1,4 +1,3 @@
-import NavigationBarr from './NavigationBar';
 import { useState } from 'react';
 import { useEffect, useRef } from "react";
 import { faInstagram } from '@fortawesome/free-brands-svg-icons';
@@ -6,7 +5,7 @@ import { faTiktok } from '@fortawesome/free-brands-svg-icons';
 import { faLocationDot } from '@fortawesome/free-solid-svg-icons';
 import ScrollToTopButton from './ScrollToTopButton';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
-import { faBars, faCaretDown, faCopyright, faEnvelope, faPhone } from '@fortawesome/free-solid-svg-icons'
+import { faCopyright, faEnvelope, faPhone } from '@fortawesome/free-solid-svg-icons'
 import { Link } from 'react-router-dom';
 
 
@@ -45,7 +44,7 @@ const EndingPart = () => {
         <div className="Ending-part pt-28">
             
 <div className="consultant relative flex justify-center h-[500px] text-center items-center">
-  <img src='consultImage.webp' className='object-cover  h-full w-full absolute'/>
+  <img src='consultImage.webp' alt='a' className='object-cover  h-full w-full absolute'/>
 
       <div className="fff w-[70%] md:w-[50%] ">
       <h1 ref={fadeUp12.ref}
@@ -87,7 +86,7 @@ const EndingPart = () => {
 
    
    <div className='  text-left   col-span-2 md:col-span-1 text-left'>
-       <img src='cutie.webp' className='w-24 h-24 rounded-full object-cover shadow-[0_0_20px_5px_rgba(255,192,203,0.4)]  '/>
+       <img src='cutie.webp' alt='a' className='w-24 h-24 rounded-full object-cover shadow-[0_0_20px_5px_rgba(255,192,203,0.4)]  '/>
    <p className='demLat text-[#4A4A4A] mt-3 font-medium w-[92%]'>Enhance your natural beauty with Mhidey Beauty and Lashes – Where flawless makeup meets luxurious lashes, giving you radiant skin, defined eyes, and a confidence that shines!</p>
    </div>
    

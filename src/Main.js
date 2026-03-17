@@ -1,4 +1,4 @@
-import { Routes, Route, Link } from 'react-router-dom';
+import { Routes, Route } from 'react-router-dom';
 import Appointment from './Appointment';
 import App from './App';
 import Services from './Services';

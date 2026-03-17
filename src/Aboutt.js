@@ -1,27 +1,11 @@
 import NavigationBarr from './NavigationBar';
-import { useState } from 'react';
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
-import { faBars, faCaretDown, faCopyright, faEnvelope, faPhone } from '@fortawesome/free-solid-svg-icons'
-import { useEffect, useRef } from "react";
-import Testimony from './Testimony';
+import { useEffect } from "react";
 import EndingPart from './EndingPart';
 import { Link } from 'react-router-dom';
 import TextSlider from './TextSlider';
 import AOS from "aos";
 import "aos/dist/aos.css";
 const Aboutt = () => {
-      const [isVisible, setIsVisible] = useState(false);
-      const divRef = useRef(null);
-        const [isVisible2, setIsVisible2] = useState(false);
-      const divRef2 = useRef(null);
-        const [isVisible3, setIsVisible3] = useState(false);
-      const divRef3 = useRef(null);
-        const [isVisible4, setIsVisible4] = useState(false);
-      const divRef4 = useRef(null);
-        const [isVisible5, setIsVisible5] = useState(false);
-      const divRef5 = useRef(null);
-         const [isVisible6, setIsVisible6] = useState(false);
-      const divRef6 = useRef(null);
 
             useEffect(() => {
             AOS.init({
@@ -30,101 +14,14 @@ const Aboutt = () => {
             });
           }, []);
     
-        useEffect(() => {
-          const observer = new IntersectionObserver(
-            (entries) => {
-              const entry = entries[0];
-              if (entry.isIntersecting) {
-                setIsVisible(true);
-                observer.unobserve(entry.target); // Stop observing once visible
-              }
-            },
-            { threshold: 0.3 } // 0.3 = visible when 30% of div is in view
-          );
+
       
-          if (divRef.current) observer.observe(divRef.current);
-          return () => observer.disconnect();
-        }, []);
+
       
-          useEffect(() => {
-          const observer = new IntersectionObserver(
-            (entries) => {
-              const entry = entries[0];
-              if (entry.isIntersecting) {
-                setIsVisible2(true);
-                observer.unobserve(entry.target); // Stop observing once visible
-              }
-            },
-            { threshold: 0.3 } // 0.3 = visible when 30% of div is in view
-          );
-      
-          if (divRef2.current) observer.observe(divRef2.current);
-          return () => observer.disconnect();
-        }, []);
-      
-          useEffect(() => {
-          const observer = new IntersectionObserver(
-            (entries) => {
-              const entry = entries[0];
-              if (entry.isIntersecting) {
-                setIsVisible3(true);
-                observer.unobserve(entry.target); // Stop observing once visible
-              }
-            },
-            { threshold: 0.3 } // 0.3 = visible when 30% of div is in view
-          );
-      
-          if (divRef3.current) observer.observe(divRef3.current);
-          return () => observer.disconnect();
-        }, []);
-      
-          useEffect(() => {
-          const observer = new IntersectionObserver(
-            (entries) => {
-              const entry = entries[0];
-              if (entry.isIntersecting) {
-                setIsVisible4(true);
-                observer.unobserve(entry.target); // Stop observing once visible
-              }
-            },
-            { threshold: 0.3 } // 0.3 = visible when 30% of div is in view
-          );
-      
-          if (divRef4.current) observer.observe(divRef4.current);
-          return () => observer.disconnect();
-        }, []);
-      
-          useEffect(() => {
-          const observer = new IntersectionObserver(
-            (entries) => {
-              const entry = entries[0];
-              if (entry.isIntersecting) {
-                setIsVisible5(true);
-                observer.unobserve(entry.target); // Stop observing once visible
-              }
-            },
-            { threshold: 0.3 } // 0.3 = visible when 30% of div is in view
-          );
-      
-          if (divRef5.current) observer.observe(divRef5.current);
-          return () => observer.disconnect();
-        }, []);
-      
-            useEffect(() => {
-          const observer = new IntersectionObserver(
-            (entries) => {
-              const entry = entries[0];
-              if (entry.isIntersecting) {
-                setIsVisible6(true);
-                observer.unobserve(entry.target); // Stop observing once visible
-              }
-            },
-            { threshold: 0.3 } // 0.3 = visible when 30% of div is in view
-          );
-      
-          if (divRef6.current) observer.observe(divRef6.current);
-          return () => observer.disconnect();
-        }, []);
+
+
+
+
     return ( 
         
       <div className="about-t">
@@ -136,7 +33,7 @@ const Aboutt = () => {
     md:text-6xl lack lg:text-7xl lg:leading-[1.2] xl:text-8xl ' data-aos="fade-in">About Us</h1>
 
 
-    <img src='bookImage.webp' className="absolute bottom-0 md:top-0 w-full h-[89%] md:h-full  object-cover object-right-bottom"/>
+    <img src='bookImage.webp' alt='a'  className="absolute bottom-0 md:top-0 w-full h-[89%] md:h-full  object-cover object-right-bottom"/>
 
 </div>
         </div>
@@ -148,7 +45,7 @@ const Aboutt = () => {
   <img src='redlips.webp' data-aos="fade-right"
    className=' h-80 md:h-96 text-center mx-auto   imgSet
    md:my-auto lg:h-[450px]  xl:h-[520px]'
-   
+   alt='a' 
     />
     <div className="textBelowLower1  text-left w-[90%] mx-5 md:mx-0 mustUseColor">
     <p className= 'aboutUs font-thin mb-3 ' data-aos="fade-left">Background</p>
@@ -176,7 +73,7 @@ it is a personalized experience. From skin preparation to the final touch,
   <p className=' mb-3 demLat sm:text- lineee  '   data-aos="fade-left">
 At Mhidey Beauty & Lashes, beauty is not about transformation—it’s about refinement. We enhance what you already have, bringing harmony to your features and creating a polished finish that radiates grace, poise, and undeniable charm.</p>
 
-<Link to="/about"> <button data-aos="fade-left" className=  'justify-center items-center bg-pink-300 px-14 py-2 mt-8  hover:bg-black transition-colors duration-500 rounded-sm 'ref={divRef6}>
+<Link to="/about"> <button data-aos="fade-left" className=  'justify-center items-center bg-pink-300 px-14 py-2 mt-8  hover:bg-black transition-colors duration-500 rounded-sm '>
   <p className='text-center text-white theFont '>Contact Us</p>
  </button>  </Link>
     </div>
@@ -189,7 +86,7 @@ At Mhidey Beauty & Lashes, beauty is not about transformation—it’s about ref
 
 
     <div className="experrt mx-auto   h-[500px] bg-slate-600 longie" data-aos="zoom-in">
-    <img src='expert.webp' className='w-full h-[85%] md:h-[85%]  mt-5 object-cover md:object-center'/>
+    <img src='expert.webp' alt='a'  className='w-full h-[85%] md:h-[85%]  mt-5 object-cover md:object-center'/>
     <div className="mt-3 md:mt-4">
    <p className='text-white playfairDisplay text-center text-xl '>Rebecca Paollo</p>
     <p className='text-white text-center LATO text-[14px] '>Professional Beauty Artist</p>

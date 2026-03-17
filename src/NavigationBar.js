@@ -1,15 +1,11 @@
-import { faBars, faCaretDown, faCopyright, faEnvelope, faPhone, faXmark } from '@fortawesome/free-solid-svg-icons'
+import { faBars, faCaretDown } from '@fortawesome/free-solid-svg-icons'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
-import { useReducer, useState } from 'react'
-import { useRef } from 'react'
+import {  useState } from 'react'
 import { Link } from 'react-router-dom'
 import { faAngleRight } from "@fortawesome/free-solid-svg-icons";
 
 const NavigationBarr = () => {
-const [change, setChange] = useState(false);
-const bringUp = useRef(null)
-const cancel = useRef(null)
-const cancel2 = useRef(null)
+
 const [open, setOpen] = useState(false);
 const [render, setRender] = useState(false);
 const [open2, setOpen2] = useState(false);
@@ -19,7 +15,6 @@ const [hovered, setHovered] = useState(false);
 
 const visible = open3 || hovered;
 const [render2, setRender2] = useState(false);
-const [render3, setRender3] = useState(false);
 
 
 
@@ -49,18 +44,7 @@ const toggleMenu2 = () => {
 }
 
 
-const toggleMenu3 = () => {
-  if (!render3) {
-    setRender3(true)
 
-    // wait for mount before animating
-    requestAnimationFrame(() => {
-      setOpen3(true)
-    })
-  } else {
-    setOpen3(false)
-  }
-}
 
 const handleAnimationEnd = () => {
   if (!open) {
@@ -91,7 +75,7 @@ const handleAnimationEnd = () => {
           
             {/* content */}
             <div className="relative flex items-center md:justify-around lg:justify-between xl:justify-around">
-              <img
+              <img alt='a'
                 src="cutie.webp"
                 className="w-36 h-36 p-3 xl:w-20 xl:h-20
                  md:w-16 md:h-16 md:p-2 md:ml:0

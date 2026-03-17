@@ -1,14 +1,6 @@
 import './App.css';
-import { Progress } from "./components/ui/progress"
-import { Separator } from "./components/ui/separator"
 import { useState } from 'react';
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
-import { faBars, faCaretDown, faCopyright, faEnvelope, faPhone } from '@fortawesome/free-solid-svg-icons'
 import { useEffect, useRef } from "react";
-import { faInstagram } from '@fortawesome/free-brands-svg-icons';
-import { faTiktok } from '@fortawesome/free-brands-svg-icons';
-import { faLocationDot } from '@fortawesome/free-solid-svg-icons';
-import ScrollToTopButton from './ScrollToTopButton';
 import NavigationBarr from './NavigationBar';
 import { Link } from 'react-router-dom';
 import AOS from "aos";
@@ -16,27 +8,7 @@ import "aos/dist/aos.css";
 import EndingPart from './EndingPart';
 import TextSlider from './TextSlider';
 
-export const useInView = (threshold = 0.3) => {
-  const ref = useRef(null);
-  const [isVisible, setIsVisible] = useState(false);
-  useEffect(() => {
-    const observer = new IntersectionObserver(
-      ([entry]) => {
-        if (entry.isIntersecting) {
-          setIsVisible(true);
-          observer.unobserve(entry.target);
-        }
-      },
-      { threshold } // ✅ MUST be an object
-    );
 
-    if (ref.current) observer.observe(ref.current);
-
-    return () => observer.disconnect();
-  }, [threshold]);
-
-  return { ref, isVisible };
-};
 
 
 
@@ -44,64 +16,24 @@ export const useInView = (threshold = 0.3) => {
 
 
 function App() {
-  const [change, setChange] = useState(false);
-  const handleToggle =() => {
-      setChange((prev) => !prev);
-  }
-  const [isVisible, setIsVisible] = useState(false);
-  const divRef = useRef(null);
-    const [isVisible2, setIsVisible2] = useState(false);
-  const divRef2 = useRef(null);
+
+
     const [isVisible3, setIsVisible3] = useState(false);
   const divRef3 = useRef(null);
-    const [isVisible4, setIsVisible4] = useState(false);
-  const divRef4 = useRef(null);
-    const [isVisible5, setIsVisible5] = useState(false);
-  const divRef5 = useRef(null);
-     const [isVisible6, setIsVisible6] = useState(false);
-  const divRef6 = useRef(null);
 
 
 
 
 
 
-  const slideLeft = useInView(0.3);
-  const zoomIn = useInView(0.3);
 
 
 
-  useEffect(() => {
-    const observer = new IntersectionObserver(
-      (entries) => {
-        const entry = entries[0];
-        if (entry.isIntersecting) {
-          setIsVisible(true);
-          observer.unobserve(entry.target); 
-        }
-      },
-      { threshold: 0.3 } 
-    );
 
-    if (divRef.current) observer.observe(divRef.current);
-    return () => observer.disconnect();
-  }, []);
 
-    useEffect(() => {
-    const observer = new IntersectionObserver(
-      (entries) => {
-        const entry = entries[0];
-        if (entry.isIntersecting) {
-          setIsVisible2(true);
-          observer.unobserve(entry.target);
-        }
-      },
-      { threshold: 0.3 }
-    );
 
-    if (divRef2.current) observer.observe(divRef2.current);
-    return () => observer.disconnect();
-  }, []);
+ 
+
 
     useEffect(() => {
     const observer = new IntersectionObserver(
@@ -119,53 +51,12 @@ function App() {
     return () => observer.disconnect();
   }, []);
 
-    useEffect(() => {
-    const observer = new IntersectionObserver(
-      (entries) => {
-        const entry = entries[0];
-        if (entry.isIntersecting) {
-          setIsVisible4(true);
-          observer.unobserve(entry.target); 
-        }
-      },
-      { threshold: 0.3 } 
-    );
 
-    if (divRef4.current) observer.observe(divRef4.current);
-    return () => observer.disconnect();
-  }, []);
 
-    useEffect(() => {
-    const observer = new IntersectionObserver(
-      (entries) => {
-        const entry = entries[0];
-        if (entry.isIntersecting) {
-          setIsVisible5(true);
-          observer.unobserve(entry.target); 
-        }
-      },
-      { threshold: 0.3 } 
-    );
 
-    if (divRef5.current) observer.observe(divRef5.current);
-    return () => observer.disconnect();
-  }, []);
 
-      useEffect(() => {
-    const observer = new IntersectionObserver(
-      (entries) => {
-        const entry = entries[0];
-        if (entry.isIntersecting) {
-          setIsVisible6(true);
-          observer.unobserve(entry.target); 
-        }
-      },
-      { threshold: 0.3 }
-    );
 
-    if (divRef6.current) observer.observe(divRef6.current);
-    return () => observer.disconnect();
-  }, []);
+
 
 
     const images = [
@@ -232,6 +123,7 @@ AOS.init({
 
 
 <img
+alt='a'
   src="popp.webp"  
   className="absolute bottom-0 object-contain scale-[1.8] origin-bottom right-0 
    drop-shadow-[0_0_35px_rgba(255,255,255,0.6)]
@@ -266,7 +158,7 @@ md:text-[16px]
     md:grid-cols-2 md:mt-28 mb-3  overflow-x-hidden
   ">
     <div className="nn" data-aos="fade-right">
-  <img src='redlips.webp'  
+  <img src='redlips.webp'  alt='a'
    className=' h-80 md:h-96 text-center mx-auto   imgSet
    md:my-auto lg:h-[450px]  xl:h-[520px]'
    
@@ -274,19 +166,19 @@ md:text-[16px]
     </div>
 
     <div className="textBelowLower1  text-left w-[90%] mx-5 md:mx-0 mustUseColor">
-    <p className=' aboutUs font-thin mb-3 'ref={divRef2} data-aos="fade-left" >About Us</p>
+    <p className=' aboutUs font-thin mb-3 'data-aos="fade-left" >About Us</p>
     <h1 className='welcome font-bold text-3xl  mb-5 ' ref={divRef3} data-aos="fade-left" >Welcome to Mhidey Beauty and Lashes</h1>
-    <p className= 'mb-3 demLat lineee  '  ref={divRef4} data-aos="fade-left" >
+    <p className= 'mb-3 demLat lineee  '  data-aos="fade-left" >
   At Mhidey Beauty & Lashes, we believe every woman deserves to look and feel effortlessly beautiful.
   Mhidey specializes in professional makeup artistry and luxury lash enhancements that elevate your natural beauty with precision and care.</p>
 
 
-<p className= 'mb-3 demLat sm:text- lineee '   ref={divRef5} data-aos="fade-left" >
+<p className= 'mb-3 demLat sm:text- lineee '    data-aos="fade-left" >
 Our services include soft glam and bridal makeup, classic, hybrid, and volume lash extensions, and lash lifts and tints
 With a passion for detail and a commitment to excellence.Trust us to help you shine with a radiant glow that’s undeniably you
 </p>
 <div className="bt" data-aos="fade-left">
-<Link to="/about"> <button   className=' justify-center items-center bg-pink-300 px-14 py-2 mt-8  hover:bg-black transition-colors duration-500 rounded-sm 'ref={divRef6}>
+<Link to="/about"> <button   className=' justify-center items-center bg-pink-300 px-14 py-2 mt-8  hover:bg-black transition-colors duration-500 rounded-sm '>
   <p className='text-center text-white theFont '>Read More</p>
  </button>  </Link></div>
     </div>
@@ -305,7 +197,7 @@ With a passion for detail and a commitment to excellence.Trust us to help you sh
       data-aos="zoom-in"
 className='g1 flex flex-col items-center  relative h-[350px] 
   transition-all duration-700 ease-out'
- >      <img  src='nn1.webp' 
+ >      <img  src='nn1.webp' alt='a'
       className=' brightness-75 hover:brightness-100 hover:scale-95 transition-all duration-500 ease-out z-50 relative h-[85%] object-cover w-full'
       />
       <p className='absolute text-white top-[40%] z-50 text-2xl textOnPic' > Nude Makeup </p>
@@ -320,7 +212,7 @@ className='g1 flex flex-col items-center  relative h-[350px]
       data-aos="zoom-in"
 className='g1 flex flex-col items-center  relative h-[350px] 
   transition-all duration-700 ease-out'
- >     <img  src='blabla.webp' 
+ >     <img  src='blabla.webp' alt='a'
       className=' brightness-75 hover:brightness-100 hover:scale-95 transition-all duration-500 ease-out z-50 relative h-[85%] object-cover w-full'
       />
       <p className='absolute text-white top-[40%] z-50 text-2xl textOnPic' > Micro Shading </p>
@@ -335,7 +227,7 @@ className='g1 flex flex-col items-center  relative h-[350px]
       data-aos="zoom-in"
 className='g1 flex flex-col items-center  relative h-[350px] 
   transition-all duration-700 ease-out'
- >       <img  src='mMakeup.webp' 
+ >       <img  src='mMakeup.webp ' alt='a'
       className=' brightness-75 hover:brightness-100 hover:scale-95 transition-all duration-500 ease-out z-50 relative  h-[85%] object-cover w-full'
       />
       <p className='absolute text-white top-[40%] z-50 text-2xl textOnPic' > Matte Makeup </p>
@@ -349,7 +241,7 @@ className='g1 flex flex-col items-center  relative h-[350px]
       data-aos="zoom-in"
 className='g1 flex flex-col items-center  relative h-[350px] 
   transition-all duration-700 ease-out' 
- >        <img  src='wis8.webp' 
+ >        <img  src='wis8.webp' alt='a'
       className=' brightness-75 hover:brightness-100 hover:scale-95 transition-all duration-500 ease-out z-50 relative  h-[85%] object-cover w-full'
       />
       <p className='absolute text-white top-[40%] z-50 text-2xl textOnPic' > Wispy Lashes </p>
@@ -366,7 +258,7 @@ className='g1 flex flex-col items-center  relative h-[350px]
   xl:h-auto 
  grid  grid-cols-1 md:grid-cols-2 gap-5
 h-auto   ">
-  <img src='leafs.webp' className=' absolute object-cover 
+  <img src='leafs.webp' alt='a' className=' absolute object-cover 
   object-left-top  h-full w-full z-0
       
   '/>
@@ -414,7 +306,7 @@ h-auto   ">
  </button>  </Link> </div>
  </div>
  <div className="set overflow-x-hidden " >
- <img src='crea.webp' data-aos="fade-left" className=' relative  w-full  object-cover z-50   changes xl:h-[600px] '/>
+ <img alt='a' src='crea.webp' data-aos="fade-left" className=' relative  w-full  object-cover z-50   changes xl:h-[600px] '/>
 </div>
 </div>
 
@@ -436,7 +328,7 @@ className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-4  px-7'
     <div 
      key={index} className='items-center hover:opacity-80 relative group h-[400px]   md:p-12 transition-opacity duration-700 '
      >
-      <img
+      <img 
       loading="lazy" 
         src={src}
         alt="gallery" data-aos="fade-in"
@@ -466,7 +358,7 @@ className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-4  px-7'
           </button>
 
           {/* Image */}
-          <img
+          <img alt='a'
             src={images[currentIndex]}
             className="max-h-[80vh] max-w-[90vw] rounded-lg"
           />

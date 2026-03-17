@@ -1,11 +1,9 @@
 import NavigationBarr from './NavigationBar';
-import Image from './Image';
-import Testimony from './Testimony';
 import EndingPart from './EndingPart';
 import TextSlider from './TextSlider';
 import AOS from "aos";
 import "aos/dist/aos.css";
-import { useEffect, useRef } from "react";
+import { useEffect } from "react";
 import Images4 from './Images4';
 
 
@@ -25,7 +23,7 @@ const NudeMakeup = () => {
     md:text-6xl lack lg:text-7xl lg:leading-[1.2] xl:text-8xl ' data-aos="fade-in">Nude Makeup</h1>
 
 
-    <img src='bookImage.webp' className="absolute bottom-0 md:top-0 w-full h-[89%] md:h-full  object-cover object-right-bottom"/>
+    <img src='bookImage.webp' alt='a'  className="absolute bottom-0 md:top-0 w-full h-[89%] md:h-full  object-cover object-right-bottom"/>
 
 </div>
 

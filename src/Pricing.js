@@ -1,10 +1,9 @@
 import EndingPart from './EndingPart';
 import NavigationBarr from './NavigationBar';
-import Testimony from './Testimony';
 import TextSlider from './TextSlider';
 import AOS from "aos";
 import "aos/dist/aos.css";
-import { useEffect, useRef } from "react";
+import { useEffect } from "react";
 import { Link } from 'react-router-dom';
 
 
@@ -27,7 +26,7 @@ const Pricing = () => {
     md:text-6xl lack lg:text-7xl lg:leading-[1.2] xl:text-8xl ' data-aos="fade-in">Pricing</h1>
 
 
-    <img src='bookImage.webp' className="absolute bottom-0 md:top-0 w-full h-[89%] md:h-full  object-cover object-right-bottom"/>
+    <img src='bookImage.webp' alt='a'  className="absolute bottom-0 md:top-0 w-full h-[89%] md:h-full  object-cover object-right-bottom"/>
 
 </div>
 </div>
@@ -38,7 +37,7 @@ const Pricing = () => {
 
 <div className="flex flex-col md:flex-row   items-center mt-5 p-5">
       <div data-aos="zoom-in" className="box1 w-[100%] h-[400px]  bg-slate-600 rounded-2xl shadow-[0_10px_25px_rgba(0,0,0,0.08)] text-[14px]">
-        <img src='model.webp' className='w-44  text-center mx-auto p-5 mt-5'/>
+        <img src='model.webp' alt='a'  className='w-44  text-center mx-auto p-5 mt-5'/>
         <p className='Playfair Display  text-2xl text-center text-white  font-bold'>Wispy Lashes</p>
         <div className="mt-10  px-7  mx-auto">
         <p className='Poppins2 text-white '>Wispy Lashes ............................... $210</p>
@@ -47,7 +46,7 @@ const Pricing = () => {
 </div>
       </div>
       <div data-aos="zoom-in"  className="box1 w-[100%] h-[380px] bg-white rounded-2xl shadow-[0_10px_25px_rgba(0,0,0,0.12),0_20px_40px_rgba(0,0,0,0.10)] text-[14px]">
-            <img src='model2.webp' className='w-44  text-center mx-auto p-5 mt-5'/>
+            <img src='model2.webp' alt='a'  className='w-44  text-center mx-auto p-5 mt-5'/>
         <p className='Playfair Display  text-2xl text-center text-black  font-bold'>Nude Makeup</p>
         <div className="mt-10  px-7  mx-auto">
         <p className='Poppins2 text-black '>Wispy Lashes ............................... $295</p>
@@ -59,7 +58,7 @@ const Pricing = () => {
 
 <div className="flex flex-col  md:flex-row-reverse  items-center mt-5 p-5">
       <div data-aos="zoom-in"  className="box1 w-[100%] h-[400px]  bg-slate-600 rounded-2xl shadow-[0_10px_25px_rgba(0,0,0,0.08)] text-[14px]">
-        <img src='model.webp' className='w-44  text-center mx-auto p-5 mt-5'/>
+        <img src='model.webp' alt='a'  className='w-44  text-center mx-auto p-5 mt-5'/>
         <p className='Playfair Display  text-2xl text-center text-white  font-bold'>Matte Makeup</p>
         <div className="mt-10  px-7  mx-auto">
         <p className='Poppins2 text-white '>Wispy Lashes ............................... $200</p>
@@ -68,7 +67,7 @@ const Pricing = () => {
 </div>
       </div>
       <div data-aos="zoom-in"  className="box1 w-[100%] h-[380px] bg-white rounded-2xl shadow-[0_10px_25px_rgba(0,0,0,0.12),0_20px_40px_rgba(0,0,0,0.10)] text-[14px]">
-            <img src='model2.webp' className='w-44  text-center mx-auto p-5 mt-5'/>
+            <img src='model2.webp' alt='a'  className='w-44  text-center mx-auto p-5 mt-5'/>
         <p className='Playfair Display  text-2xl text-center text-black  font-bold'>Micro Shading</p>
         <div className="mt-10  px-7  mx-auto">
         <p className='Poppins2 text-black '>Wispy Lashes ............................... $280</p>

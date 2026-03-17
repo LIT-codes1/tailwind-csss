@@ -1,13 +1,13 @@
 import NavigationBarr from './NavigationBar';
 import { faLocationDot } from '@fortawesome/free-solid-svg-icons';
-import { faBars, faCaretDown, faCopyright, faEnvelope, faPhone } from '@fortawesome/free-solid-svg-icons'
+import {  faEnvelope, faPhone } from '@fortawesome/free-solid-svg-icons'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { useState } from 'react';
 import EndingPart from './EndingPart';
 import {  faClock } from '@fortawesome/free-solid-svg-icons'
 import AOS from "aos";
 import "aos/dist/aos.css";
-import { useEffect, useRef } from "react";
+import { useEffect } from "react";
 
 const Contact = () => {
       const [formData, setFormData] = useState({
@@ -47,12 +47,12 @@ const Contact = () => {
     md:text-6xl lack lg:text-7xl lg:leading-[1.2] xl:text-8xl 'data-aos="fade-in">Contact</h1>
 
 
-    <img src='bookImage.webp' className="absolute bottom-0 md:top-0 w-full h-[89%] md:h-full  object-cover object-right-bottom"/>
+    <img src='bookImage.webp' alt='a'  className="absolute bottom-0 md:top-0 w-full h-[89%] md:h-full  object-cover object-right-bottom"/>
 
 </div>
 
 <div className="innerBeauty relative w-full h-auto overflow-hidden bg-white   lg:px-14  ">
-            <img src='model2.webp' className='w-40 relative text-center mx-auto p-10 mt-5 z-50 ' data-aos="fade-up"/>
+            <img src='model2.webp' alt='a'  className='w-40 relative text-center mx-auto p-10 mt-5 z-50 ' data-aos="fade-up"/>
 
   <img
     src="leafs.webp"
