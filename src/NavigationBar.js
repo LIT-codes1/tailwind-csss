@@ -57,9 +57,7 @@ const handleAnimationEnd = () => {
   }
 
   
-  if(!open3) {
- setRender3(false);
-  }
+
 };
 
 
