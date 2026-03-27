@@ -29,19 +29,9 @@ const toggleMenu = () => {
 };
 
 
-
 const toggleMenu2 = () => {
-  if (!render2) {
-    setRender2(true)
-
-    // wait for mount before animating
-    requestAnimationFrame(() => {
-      setOpen2(true)
-    })
-  } else {
-    setOpen2(false)
-  }
-}
+  setOpen2(prev => !prev);
+};
 
 
 
@@ -151,7 +141,7 @@ const handleAnimationEnd = () => {
   <button onClick={toggleMenu} >
     <FontAwesomeIcon
       icon={open ? faBars : faBars}
-      className="text-2xl text-white cursor-pointer z-50"
+      className="text-xl text-white cursor-pointer z-50"
     />
   </button>
 
@@ -159,18 +149,20 @@ const handleAnimationEnd = () => {
 </div>
 
 </div>
+
+
 {render &&(
 
 
 <div     
-    className= 'h-auto  p-2 md:hidden  absolute top-24   z-100  flex justify-center  items-center w-full inter imp'
+    className= 'h-auto  p-2 md:hidden  absolute top-24   z-100  flex justify-center  items-center w-full inter imp overflow-hidden'
     >
 <div 
   onAnimationEnd={handleAnimationEnd}
     className={`
       execute
       ${open ? "fade-in-top" : "fade-out-top"}
-w-[100%] bg-white/90 z-50   text-gray-700  demLat `}>
+w-[100%] bg-white/90 z-50   text-gray-700  demLat overflow-hidden `}>
 
    
 ,<Link to='/'><p className="p-3 bg--400 hover:bg-green-600 transition-colors duration-300 hover:text-white mt-[-24px]">
@@ -190,17 +182,18 @@ w-[100%] bg-white/90 z-50   text-gray-700  demLat `}>
 />
 </p>
 
-{render2 && (
-  <div
-    onAnimationEnd={handleAnimationEnd}
-    className={`
-      execute
-      innerDiv
-      bg-white
-      text-[14px]
-      ${open2 ? 'slide-in' : 'slide-out'}
-    `}
-  >
+
+<div
+  className={`
+    innerDiv
+    bg-white
+    text-[14px]
+    overflow-hidden
+    transition-all duration-500 ease-in-out
+    ${open2 ? 'max-h-[300px] opacity-100' : 'max-h-0 opacity-0'}
+  `}
+>
+  
    <Link to='/wispy'><p className='p-2  hover:bg-green-600 transition-colors duration-300 hover:text-white'>Wispy Lashes</p></Link> 
    <Link to='/matte'> <p className='p-2  hover:bg-green-600 transition-colors duration-300 hover:text-white'>Matte Makeup</p> </Link>
   <Link to='/micro'> <p className='p-2  hover:bg-green-600 transition-colors duration-300 hover:text-white'>Micro Shading</p>  </Link> 
@@ -208,7 +201,7 @@ w-[100%] bg-white/90 z-50   text-gray-700  demLat `}>
 
 
   </div>
-    )}
+  
 <Link to='/appoint'> <p className="p-3 bg--400 hover:bg-green-600 transition-colors duration-300 hover:text-white demLat">Book Now</p> </Link> 
 <Link to='/price'>  <p className="p-3 bg--400 hover:bg-green-600 transition-colors duration-300 hover:text-white ">Pricing</p> </Link>
 <Link to='/about'> <p className="p-3 bg--400 hover:bg-green-600 transition-colors duration-300 hover:text-white">About Us</p> </Link> 
