@@ -14,7 +14,6 @@ const [open3, setOpen3] = useState(false);
 const [hovered, setHovered] = useState(false);
 
 const visible = open3 || hovered;
-const [render2, setRender2] = useState(false);
 
 
 
@@ -42,9 +41,7 @@ const handleAnimationEnd = () => {
     // remove after slide-out
   }
 
-  if(!open2) {
- setRender2(false);
-  }
+
 
   
 
